@@ -1,0 +1,57 @@
+Testcase : ./pointersorter thing stuff otherstuff blarp
+expected result :
+thing
+stuff
+otherstuff
+blarp
+
+Testcase : ./pointersorter thing1stuff3otherstuff,blarp
+expected result :
+thing
+stuff
+otherstuff
+blarp
+
+Testcase : ./pointersorter "?>:}@#$%^}"
+expected result :
+No valid input token
+program will output nothing
+
+Testcase : ./pointersorter
+expected result :
+No valid input token
+program will output nothing
+
+Testcase : ./pointersorter aa"cd?e>GG:aA}brrg@wd#GGE$Eb%EAD^EXPo}lala"
+expected result :
+GGE
+GG
+EXPo
+EAD
+wd
+lala
+e
+brrg
+aA
+aacd
+
+Testcase : ./pointersorter thing Thing THing thIng
+expected result :
+THing
+Thing
+thIng
+thing
+
+Testcase : ./pointersorter same same same
+expected result :
+same
+same
+same
+
+Testcase : ./pointersorter aand,aAnd,Aand,AAnd
+expected result :
+AAnd
+Aand
+aAnd
+aand
+

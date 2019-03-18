@@ -1,0 +1,5 @@
+For workload_E :
+	workload_E is similar to workload_D, they both randomly choose between randomly-sized malloc() or free()ing a pointer. The difference is instead of free() the pointer one by one in order, we want to test if our free() can also do well when we choose a random pointer to free. 
+
+For workload_F :
+	In workload_F we want the function to malloc() i times and then free all those pointers while i increasing from 1 to 150. We think this workload can test the running time of our code when we need to malloc a large amount of small datas. The theoritical most malloc(1) our code can handle is 682 malloc(1)s and we tested that in workload_F and the average running time for 100 times is 207487 microseconds. Since it is too long so in our memgrind.c we limit the i to 150.
